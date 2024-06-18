@@ -286,7 +286,7 @@ class SearchPageParser(PageParser):
 
 
 class HashtagPageParser(PageParser):
-    cursor_regex = re.compile(r'(\/hashtag\/[a-z]+\/\?cursor=[^"]+).*$')
+    cursor_regex = re.compile(r'(\/hashtag\/[a-z]+\/\?locale=[a-z_A-Z]+&amp;cursor=[^"]+).*$')
 
     def get_page(self) -> Page:
         return super()._get_page('article', 'article')
